@@ -30,11 +30,9 @@ public class CustomerControler {
 		return customerService.savEntities(customerEntity);
 	}
 
-	@GetMapping("/customer/{id}")
+	@GetMapping("/viewCustomer/{id}")
 	public CustomerEntity viewByIDCustomerEntity(@PathVariable int id) {
 		return customerService.getCustomerById(id);
 	}
 
-	{
-	}
 }

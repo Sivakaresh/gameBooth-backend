@@ -22,4 +22,6 @@ public class CustomerEntity {
 	private int id;
 	private String name;
 	private int hours;
+	private int amount;
+	private int boothId;
 }

@@ -21,4 +21,9 @@ public class GameBoothService {
 	public GameBoothEntity addBoothEntity(GameBoothEntity gameBoothEntity) {
 		return gameBoothRepository.save(gameBoothEntity);
 	}
+
+	public GameBoothEntity getBoothEntity(int id) {
+		return gameBoothRepository.findById(id).orElse(null);
+	}
+
 }

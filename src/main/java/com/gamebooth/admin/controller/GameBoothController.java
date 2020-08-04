@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,6 +27,11 @@ public class GameBoothController {
 	@PostMapping("/add")
 	public GameBoothEntity add(@RequestBody GameBoothEntity gameBoothEntity) {
 		return gameBoothService.addBoothEntity(gameBoothEntity);
+	}
+
+	@GetMapping("/view/{id}")
+	public GameBoothEntity viewById(@PathVariable int id) {
+		return gameBoothService.getBoothEntity(id);
 	}
 
 }
